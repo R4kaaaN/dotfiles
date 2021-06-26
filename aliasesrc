@@ -19,11 +19,11 @@ alias \
 
 # Colorize (Creds to LukeSmith).
 alias \
-	ls="ls -hN --color=auto --group-directories-first" \
-    ll='lsd -alh --group-dirs first' \
-	grep="grep --color=auto" \
-	diff="diff --color=auto" \
-    ipa='ip -br -c addr show'
+    ls="ls -hN --color=auto --group-directories-first" \
+    ll="lsd -alh --group-dirs first" \
+    grep="grep --color=auto" \
+    diff="diff --color=auto" \
+    ipa="ip -br -c addr show"
 
 
 # nvidia optimus -> prime select 
@@ -42,7 +42,7 @@ alias \
 # experimental - best option for the moment ( Taken from ArcoLinux )  
 alias \
     mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist" \
-    mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist" \
+    mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist" 
 
 
 # Ape Stuff 
@@ -67,10 +67,9 @@ alias \
 
 
 # Docker stuff
-alias \
-    dps='docker ps -a' \
-    di='docker images' \
-    drmi='docker rmi' \ 
-    drm='docker rm' \ 
-    dra='docker volume prune -f && docker rm -f $(docker ps -a -q) && docker image rm -f $(docker images -a -q) && docker system prune -f && docker network prune -f'
-
+#alias \
+#    dps='docker ps -a' \
+#    di='docker images' \
+#    drmi='docker rmi' \ 
+#    drm='docker rm' \ 
+#    dra="docker volume prune -f && docker rm -f $(docker ps -a -q) && docker image rm -f $(docker images -a -q) && docker system prune -f && docker network prune -f"
