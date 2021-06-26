@@ -1,0 +1,76 @@
+# One letter (Lazy man).
+alias l='ls -a'
+alias v='vim'
+alias p='sudo pacman'
+
+# Package manager
+alias pacman='sudo pacman'
+alias yay='paru'
+
+# File manager 
+alias lf="ranger"
+
+
+# Verbosity (Creds to LukeSmith).
+alias \
+	cp="cp -v" \
+	mv="mv -v" \
+	rm="rm -v"
+
+# Colorize (Creds to LukeSmith).
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+    ll='lsd -alh --group-dirs first' \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+    ipa='ip -br -c addr show'
+
+
+# nvidia optimus -> prime select 
+alias \
+    nvidia="sudo prime-select nvidia" \
+    intel="sudo prime-select intel"
+
+# Get fastest mirrors in your neighborhood ( Taken from ArcoLinux ) 
+
+alias \
+    mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist" \
+    mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist" \
+    mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist" \
+    mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
+
+# experimental - best option for the moment ( Taken from ArcoLinux )  
+alias \
+    mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist" \
+    mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist" \
+
+
+# Ape Stuff 
+alias xclip="xclip -sel clipboard"
+alias sensors='watch sensors'
+alias look='find / -iname ${1} 2>/dev/null'
+alias fucking='sudo !!'
+alias bashrc='vim ~/.bashrc'
+alias uprc="source ~/.bashrc"
+alias gcl='git clone'
+alias bc='bc -l'
+alias ports='netstat -tlnp'
+alias bored='sudo sh -c "vmstat && dmesg && sensors"'
+alias IP='echo $(curl -s https://ifconfig.me)'
+
+# Quick iptables stuff
+alias \
+    iptlist='sudo /sbin/iptables -L -n -v --line-numbers' \
+    iptlistin='sudo /sbin/iptables -L INPUT -n -v --line-numbers' \
+    iptlistout='sudo /sbin/iptables -L OUTPUT -n -v --line-numbers' \
+    iptlistfw='sudo /sbin/iptables -L FORWARD -n -v --line-numbers' 
+
+
+# Docker stuff
+alias \
+    dps='docker ps -a' \
+    di='docker images' \
+    drmi='docker rmi' \ 
+    drm='docker rm' \ 
+    dra='docker volume prune -f && docker rm -f $(docker ps -a -q) && docker image rm -f $(docker images -a -q) && docker system prune -f && docker network prune -f'
+
